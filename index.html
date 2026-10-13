@@ -1176,6 +1176,87 @@ tr:hover td,tr.on td{background:#EEF2F8!important}
   <aside class="card cat" id="cat">
     <div class="cat-h"><div class="cat-t">Indicateurs</div><div class="cat-s"><input id="catq" type="text" autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Rechercher un indicateur" aria-label="Rechercher un indicateur"></div></div>
     <div id="catl"></div>
+    
+    <!-- Encadré dynamique : Comment lire cet indicateur -->
+    <div id="ind-explainer" style="margin:10px 8px;padding:12px;background:#F8FAFC;border:1px solid #DCE3EC;border-radius:8px;font-size:12.5px;line-height:1.45"></div>
+
+    <!-- Guide complet déroulant des 6 indicateurs -->
+    <details class="cat-m" style="margin:8px;background:#fff;border:1px solid #DCE3EC;border-radius:8px;padding:8px 10px;font-size:12.5px" id="det-guide">
+      <summary style="font-weight:700;color:#1C3961;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between">
+        <span>📖 Guide des 6 indicateurs</span>
+        <span style="font-size:11px;color:#6A7385">Afficher / Masquer</span>
+      </summary>
+      <div style="margin-top:10px;border-top:1px solid #EEF2F6;padding-top:8px">
+        <p style="margin:0 0 8px;font-size:12px;color:#455066">L'Atlas des communes colore chaque commune selon un seul indicateur à la fois. Chacun répond à une question simple et se calcule par un ratio :</p>
+        <div style="overflow-x:auto">
+          <table style="width:100%;border-collapse:collapse;font-size:11.5px;margin-bottom:10px">
+            <thead>
+              <tr style="background:#F1F4F8;color:#1C3961;text-align:left">
+                <th style="padding:5px 6px;border:1px solid #DCE3EC">Indicateur</th>
+                <th style="padding:5px 6px;border:1px solid #DCE3EC">Question</th>
+                <th style="padding:5px 6px;border:1px solid #DCE3EC">Calcul</th>
+                <th style="padding:5px 6px;border:1px solid #DCE3EC">France</th>
+                <th style="padding:5px 6px;border:1px solid #DCE3EC">Exemple (Vénissieux)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Population vivant en QPV</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">La commune est-elle très concernée par la politique de la ville ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">habitants en QPV ÷ habitants de la commune</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">8,8 %</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">44 % (29 406 sur 66 765)</td>
+              </tr>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Parc social situé en QPV</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">Les logements sociaux sont-ils concentrés dans les quartiers ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">logements sociaux en QPV ÷ logements sociaux commune</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">31 %</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">68 % (8 849 sur 12 977)</td>
+              </tr>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Passoires énergétiques F/G</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">Le parc social est-il à rénover ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">logements F ou G ÷ logements étiquette connue</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">3,2 %</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">0,6 % (73 sur 12 451)</td>
+              </tr>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Vacants proposés location</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">Y a-t-il des logements libres sans preneur ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">logements vacants proposés ÷ logements sociaux</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">2,1 %</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">1,0 % (136)</td>
+              </tr>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Familles logées pour 100 logts</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">ALS loge-t-il beaucoup de familles ici par rapport au parc ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">familles logées ALS 2025 ÷ logts sociaux × 100</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">2,8</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">12,3 (1 599 familles)</td>
+              </tr>
+              <tr>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;font-weight:600">Réservés pour 100 logts</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">Action Logement a-t-il financé beaucoup de réservations ?</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">réservés engagements 2018-2025 ÷ logts sociaux × 100</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6;color:#C2412F;font-weight:600">14,4</td>
+                <td style="padding:5px 6px;border:1px solid #EEF1F6">6,6 (858 logements)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size:11.5px;color:#334155;line-height:1.45;background:#F8FAFC;padding:8px;border-radius:6px;border:1px solid #E2E5EA">
+          <div style="font-weight:700;color:#1C3961;margin-bottom:3px">Comment lire les trois derniers :</div>
+          <div style="margin-bottom:3px">• <b>« Pour 100 logements sociaux » n'est pas un pourcentage de familles.</b> C'est une intensité qui permet de comparer une grande ville et un village. Vénissieux à 12,3 = 12 familles logées en 2025 pour 100 logements sociaux, soit plus de 4 fois la moyenne nationale.</div>
+          <div style="margin-bottom:3px">• <b>Familles logées et logements réservés ne mesurent pas la même chose.</b> Familles logées = flux d'une année (2025). Logements réservés = cumul de 8 ans d'engagements (2018-2025). Une commune peut avoir beaucoup de familles logées et peu de nouvelles réservations si son parc est déjà ancien et conventionné.</div>
+          <div style="margin-bottom:6px">• <b>Vacants proposés :</b> Un taux élevé peut signaler un problème d'attractivité ; un taux très bas signale un marché tendu.</div>
+          <div style="font-weight:700;color:#1C3961;margin-bottom:3px">Couleurs et agrégations :</div>
+          <div style="margin-bottom:3px">• Plus la couleur est foncée, plus la valeur est forte. Gris = pas de donnée ou pas de parc social.</div>
+          <div>• <b>Pas de moyenne de taux :</b> au niveau EPCI ou Département, l'outil additionne d'abord les nombres puis divise. Il ne fait jamais la moyenne des taux communaux.</div>
+        </div>
+      </div>
+    </details>
+
     <details class="cat-m"><summary>Méthode et sources</summary><div id="catnotes"></div></details>
   </aside>
   <div class="card" id="mapwrap">
@@ -1398,8 +1479,93 @@ document.getElementById('t-qpv').onchange=e=>{svg.querySelector('.qp').style.dis
 document.getElementById('t-lab').onchange=labels;
 document.getElementById('ind').onchange=e=>{ind=e.target.value;svg.querySelectorAll('.cm path').forEach(p=>p.setAttribute('fill',colv(cls(val(+p.dataset.i)))));legend();panel();labels()};
 window.addEventListener('resize',()=>home&&setVB(VB.slice()));
-function cat(){const q=(document.getElementById('catq').value||'').toLowerCase();document.getElementById('catl').innerHTML=CAT.map(([t,L])=>{const it=L.filter(x=>(x[1]+' '+x[2]).toLowerCase().includes(q));return it.length?`<div class="cat-g"><div class="cat-gt">${t}</div>${it.map(x=>`<button class="cat-i${x[0]===ind?' on':''}" data-k="${x[0]}"><b>${x[1]}</b><span>${x[2]}</span><em>${x[3]} · maille communale</em></button>`).join('')}</div>`:''}).join('')||'<div class="note">Aucun indicateur ne correspond.</div>'}
-document.getElementById('catq').oninput=cat;document.getElementById('catl').onclick=e=>{const x=e.target.closest('.cat-i');if(!x)return;const s=document.getElementById('ind');s.value=x.dataset.k;s.dispatchEvent(new Event('change'));cat()};
+const IND_META = {
+  pop: {
+    q: "La commune est-elle très concernée par la politique de la ville ?",
+    calc: "habitants en QPV ÷ habitants de la commune",
+    fr: "8,8 %",
+    ex: "44 % (29 406 sur 66 765)",
+    note: "Mesure le poids de la politique de la ville dans la population totale.",
+    src: "Insee, QPV 2024 · population 2020"
+  },
+  parc: {
+    q: "Les logements sociaux sont-ils concentrés dans les quartiers ?",
+    calc: "logements sociaux en QPV ÷ logements sociaux de la commune",
+    fr: "31 %",
+    ex: "68 % (8 849 sur 12 977)",
+    note: "Montre où se concentre le parc locatif social des bailleurs.",
+    src: "RPLS au 1er janvier 2024"
+  },
+  fg: {
+    q: "Le parc social est-il à rénover ?",
+    calc: "logements F ou G ÷ logements avec étiquette DPE renseignée",
+    fr: "3,2 %",
+    ex: "0,6 % (73 sur 12 451)",
+    note: "Indicateur de précarité énergétique et d'enjeux de rénovation thermique.",
+    src: "RPLS 2024 · diagnostics de performance énergétique"
+  },
+  vac: {
+    q: "Y a-t-il des logements libres qui ne trouvent pas preneur ?",
+    calc: "logements vacants proposés ÷ logements sociaux",
+    fr: "2,1 %",
+    ex: "1,0 % (136)",
+    note: "Taux élevé = déficit d'attractivité potentiel ; taux très bas = marché sous tension.",
+    src: "RPLS au 1er janvier 2024"
+  },
+  att: {
+    q: "Action Logement loge-t-il beaucoup de familles ici par rapport au parc ?",
+    calc: "familles logées par ALS en 2025 ÷ logements sociaux × 100",
+    fr: "2,8",
+    ex: "12,3 (1 599 familles)",
+    note: "« Pour 100 logements » n'est pas un pourcentage mais une intensité pour comparer grande ville et village (flux 2025).",
+    src: "Action Logement · attributions 2025"
+  },
+  res: {
+    q: "Action Logement a-t-il financé beaucoup de réservations ici ?",
+    calc: "réservés engagements 2018-2025 ÷ logements sociaux × 100",
+    fr: "14,4",
+    ex: "6,6 (858 logements)",
+    note: "Cumul de 8 ans d'engagements (2018-2025). Le parc peut être déjà réservé de longue date sans nouveaux flux.",
+    src: "POLARIS · engagements personnes morales 2018-2025"
+  }
+};
+
+function updateIndExplainer(){
+  const box = document.getElementById('ind-explainer');
+  if(!box) return;
+  const m = IND_META[ind] || IND_META.pop;
+  box.innerHTML = `<div style="font-weight:700;color:#1C3961;margin-bottom:6px;display:flex;align-items:center;gap:6px">
+    <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#1C3961;color:#fff;text-align:center;line-height:18px;font-size:11px">💡</span>
+    Comment lire cet indicateur
+  </div>
+  <div style="margin-bottom:4px"><b>Question :</b> ${m.q}</div>
+  <div style="margin-bottom:4px"><b>Calcul :</b> <code style="background:#EEF2F6;padding:1px 5px;border-radius:4px;font-size:11.5px;color:#1B2F55">${m.calc}</code></div>
+  <div style="margin-bottom:4px"><b>Moyenne France :</b> <b style="color:#C2412F">${m.fr}</b></div>
+  <div style="margin-bottom:5px"><b>Exemple (Vénissieux) :</b> ${m.ex}</div>
+  <div style="font-size:11.5px;color:#556277;border-top:1px dashed #D0D8E4;padding-top:5px;margin-top:5px">${m.note}</div>`;
+}
+
+function cat(){
+  const q=(document.getElementById('catq').value||'').toLowerCase();
+  document.getElementById('catl').innerHTML=CAT.map(([t,L])=>{
+    const it=L.filter(x=>(x[1]+' '+x[2]).toLowerCase().includes(q));
+    return it.length?`<div class="cat-g"><div class="cat-gt">${t}</div>${it.map(x=>{
+      const m = IND_META[x[0]] || {};
+      const tooltip = m.q ? `Question : ${m.q} &#10;Calcul : ${m.calc} &#10;France : ${m.fr} &#10;Exemple : ${m.ex}` : x[2];
+      return `<button class="cat-i${x[0]===ind?' on':''}" data-k="${x[0]}" title="${tooltip}"><b>${x[1]}</b><span>${x[2]}</span><em>${x[3]} · maille communale</em></button>`;
+    }).join('')}</div>`:''
+  }).join('')||'<div class="note">Aucun indicateur ne correspond.</div>';
+  updateIndExplainer();
+}
+document.getElementById('catq').oninput=cat;
+document.getElementById('catl').onclick=e=>{
+  const x=e.target.closest('.cat-i');
+  if(!x)return;
+  const s=document.getElementById('ind');
+  s.value=x.dataset.k;
+  s.dispatchEvent(new Event('change'));
+  cat();
+};
 document.getElementById('catnotes').innerHTML=document.querySelector('.notes').innerHTML;document.querySelector('.notes').remove();cat();
 fillOpts();render(T.e.find(t=>t.label==='Métropole Européenne de Lille'));document.getElementById('q').value='Métropole Européenne de Lille';
 window.__csv=function(){var r=[['Code commune','Commune','Département','Population 2020','Population en QPV','Part en QPV (%)','Logements sociaux','dont en QPV','Part du parc en QPV (%)','Logements F ou G','Étiquettes renseignées','Part F/G (%)','Logements vacants proposés','Taux de vacance (%)','Familles logées ALS 2025','Pour 100 logements sociaux','Logements réservés ALS 2018-2025','Réservés pour 100 logements sociaux']];
@@ -1877,12 +2043,50 @@ function resaHTML(RC,DEP,bl){const M={};const g=s=>M[s]||(M[s]={s,res:0,dis:0,li
  return`<details open><summary data-tip="Pour chaque bailleur présent autour de l'adresse : son parc dans le rayon, ce qu'Action Logement y a réservé, le stock de droits qu'il doit encore à Action Logement et le temps pour l'écouler. Chaque colonne a son propre périmètre, voir le tableau d'explication sous la liste.">Droits de réservation Action Logement (${L.length} bailleurs)</summary>
  <div style="font-size:13px;margin:6px 0 8px"><b>${fr(T.res)}</b> logements réservés par Action Logement (engagements 2018-2025) dans ${RC.size>1?'les '+RC.size+' communes du rayon':'la commune'} · <b>${fr(T.dis)}</b> droits en stock de ces bailleurs dans le département ${DEP}.</div>
  ${L.length?`<div style="overflow-x:auto"><table class="t" style="font-size:12px"><tr><th>Bailleur · durée d'écoulement</th><th class="n" data-tip="Logements sociaux de ce bailleur situés dans le rayon autour de l'adresse (RPLS 2024, adresses géolocalisées). Périmètre : le rayon.">Logts rayon</th><th class="n" data-tip="Logements réservés par Action Logement chez ce bailleur lors des engagements financiers 2018-2025 (POLARIS). Périmètre : les communes entières qui touchent le rayon, pas seulement le rayon.">Réservés 2018-2025</th><th class="n" data-tip="Droits de réservation d'Action Logement encore actifs chez ce bailleur au 31/12/2025 (ANCOLS) : droits uniques de l'ancien et du neuf, et droits de suite déjà livrés. Périmètre : tout le département.">Stock de droits dépt</th></tr>${L.slice(0,15).map(o=>`<tr title="Flux annuel 2024 : ${f(o.flux)} · à livrer : ${f(o.liv)}"><td>${nm(o.s)}<div style="margin-top:3px">${dur(o.s)}</div></td><td class="n">${f(o.ray)}</td><td class="n">${f(o.res)}</td><td class="n">${f(o.dis)}</td></tr>`).join('')}</table></div>`:'<div class="note">Aucune donnée de réservation pour ce secteur.</div>'}
- <div style="margin-top:8px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.45;background:#FAFBFC"><div style="font-weight:700;color:var(--ink2);margin-bottom:5px">Comment lire ce tableau : chaque colonne a son propre périmètre</div>
-<div style="margin-bottom:5px"><b>Logts rayon</b> : logements sociaux du bailleur <u>dans le rayon</u> autour de l'adresse. <span style="color:var(--mut)">RPLS au 01/01/2024.</span></div>
-<div style="margin-bottom:5px"><b>Réservés 2018-2025</b> : logements qu'Action Logement a réservés chez ce bailleur en échange d'un financement, <u>sur les communes entières</u> qui touchent le rayon. <span style="color:var(--mut)">POLARIS, engagements 2018-2025.</span></div>
-<div style="margin-bottom:5px"><b>Stock de droits dépt</b> : droits encore actifs, c'est-à-dire les logements qu'Action Logement peut encore proposer à ses salariés chez ce bailleur, <u>dans tout le département ${DEP}</u>. <span style="color:var(--mut)">ANCOLS au 31/12/2025.</span></div>
-<div style="margin-bottom:5px"><b>Durée d'écoulement</b> (pastille sous le nom) : années pour consommer ce stock au rythme des familles logées 2023-2025 = stock ÷ familles logées par an, <u>tous territoires du bailleur, France entière</u>. Au-delà de 30 ans : « Plus de 30 ans ».</div>
-<div style="color:var(--mut)">Les trois nombres ne s'additionnent pas et ne se comparent pas directement : périmètres et dates différents. « Réservés » peut dépasser « Logts rayon » car il porte sur toute la commune.</div></div></details>`}
+ <div style="margin-top:10px;border:1px solid #DCE3EC;border-radius:10px;padding:12px 14px;font-size:12px;line-height:1.5;background:#F8FAFC">
+  <div style="font-weight:700;color:#1C3961;font-size:13px;margin-bottom:8px;display:flex;align-items:center;gap:6px">
+    <span style="display:inline-block;width:18px;height:18px;border-radius:50%;background:#1C3961;color:#fff;text-align:center;line-height:18px;font-size:11px">📋</span>
+    Périmètre de chaque colonne · Droits de réservation
+  </div>
+  
+  <table style="width:100%;border-collapse:collapse;margin:8px 0;background:#fff;border-radius:6px;overflow:hidden;border:1px solid #DCE3EC;font-size:12px">
+    <thead>
+      <tr style="background:#EEF2F6;color:#1C3961;text-align:left">
+        <th style="padding:6px 10px;border-bottom:1px solid #DCE3EC">Colonne</th>
+        <th style="padding:6px 10px;border-bottom:1px solid #DCE3EC">Périmètre</th>
+        <th style="padding:6px 10px;border-bottom:1px solid #DCE3EC">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;font-weight:600">Logts rayon</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6">le rayon</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;color:#6A7385">RPLS 2024</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;font-weight:600">Réservés 2018-2025</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6">les communes entières du rayon</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;color:#6A7385">POLARIS</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;font-weight:600">Stock de droits</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6">le département (${DEP})</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #EEF1F6;color:#6A7385">ANCOLS au 31/12/2025</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 10px;font-weight:600">Durée d'écoulement</td>
+        <td style="padding:6px 10px">tout le bailleur, en France</td>
+        <td style="padding:6px 10px;color:#6A7385">familles logées 2023-2025</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:8px;padding-top:8px;border-top:1px dashed #CBD5E1;color:#334155;font-size:11.5px">
+    <div style="margin-bottom:4px"><b>💡 Pourquoi ces périmètres différents ?</b> Les logements du rayon sont géocodés à l'adresse exacte. En revanche, les réservations financières sont négociées à l'échelle communale, le stock de droits est géré au niveau départemental, et la durée d'écoulement est calculée au rythme national du bailleur. Ces nombres ne s'additionnent pas mais se complètent pour éclairer la présence d'Action Logement.</div>
+    <div style="margin-bottom:4px"><b>🔄 Réservé vs Stock :</b> <i>Réservés 2018-2025</i> mesure le volume contractuel cumulé sur 8 ans en contrepartie des aides versées. Le <i>Stock de droits</i> représente ce qu'Action Logement peut réellement mobiliser aujourd'hui pour loger des salariés.</div>
+    <div><b>⏳ Durée d'écoulement :</b> Années nécessaires pour consommer ce stock au rythme annuel des attributions passées. Plus la durée est courte (&lt; 5 ans), plus les droits tournent vite ; au-delà de 30 ans, le stock est difficilement consommable.</div>
+  </div>
+</div></details>`}
 let __zc=null;function zoomCtl(){if(__zc)return;const C=L.Control.extend({options:{position:'topleft'},onAdd(){const d=L.DomUtil.create('div');d.style.cssText='display:flex;gap:6px';
  const b1=L.DomUtil.create('button','fsb',d);b1.type='button';b1.textContent='Adresse';b1.title='Zoomer au niveau de la rue sur l\'adresse analysée';
  const b2=L.DomUtil.create('button','fsb',d);b2.type='button';b2.textContent='Tout le rayon';b2.title='Afficher l\'ensemble du rayon d\'analyse';
